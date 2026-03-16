@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold-50: #fdfaf2;
+  --color-gold-100: #fbf3df;
+  --color-gold-200: #f6e3ba;
+  --color-gold-300: #efcc8a;
+  --color-gold-400: #e7b35b;
+  --color-gold-500: #df9939;
+  --color-gold-600: #c97d2d;
+  --color-gold-700: #a76028;
+  --color-gold-800: #884e27;
+  --color-gold-900: #6e4123;
+  
+  --color-luxury-900: #121212;
+  --color-luxury-800: #1a1a1a;
+  --color-luxury-700: #2d2d2d;
+  
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+}
+
+body {
+  @apply bg-luxury-900 text-gold-50;
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
+
+.glass-panel {
+  @apply bg-luxury-800/80 backdrop-blur-md border border-gold-500/20 shadow-xl;
+}
+
+.btn-gold {
+  @apply bg-gradient-to-r from-gold-600 to-gold-400 text-luxury-900 font-semibold px-6 py-2 rounded-md hover:from-gold-500 hover:to-gold-300 transition-all duration-300 shadow-[0_4px_14px_0_rgba(223,153,57,0.39)] hover:shadow-[0_6px_20px_rgba(223,153,57,0.23)] active:scale-95;
+}
+
+.btn-outline-gold {
+  @apply border border-gold-500 text-gold-400 hover:bg-gold-500/10 font-semibold px-6 py-2 rounded-md transition-all duration-300;
+}
