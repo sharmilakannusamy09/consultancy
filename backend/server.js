@@ -26,11 +26,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-    origin: [
-        "https://jewellery.vercel.app",
-        "http://localhost:5173",
-        process.env.FRONTEND_URL
-    ].filter(Boolean),
+    origin: true, // Reflects the requesting origin dynamically, fixing all exact-match issues
     credentials: true
 }));
 app.use(express.json());
